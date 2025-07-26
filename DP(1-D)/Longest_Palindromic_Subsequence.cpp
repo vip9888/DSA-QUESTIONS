@@ -1,3 +1,6 @@
+/*https://leetcode.com/problems/longest-palindromic-substring*/
+
+
 /*Brute Force Solution   T.C:-o(n^3)*/
 
 class Solution {
@@ -54,6 +57,10 @@ public:
     }
 };
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+ /*DP solution(Top Down Memoization) T.C:-O(n^2) S.C:-O(n^2)*/
 
 class Solution {
 public:
@@ -77,9 +84,6 @@ public:
 
         return dp[l][r]=false;
     }
-
-    /*DP solution(Top Down Memoization) T.C:-O(n^2) S.C:-O(n^2)*/
-
     string longestPalindrome(string s) {
         int n=s.length();
         dp.assign(n+1,vector<int>(n+1,-1));
@@ -112,7 +116,7 @@ public:
 };
 
 
-
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*TWO POINTERS APPROACH (Expand from mid   T.C:-o(n^2) S.C:-o(1))*/
 
